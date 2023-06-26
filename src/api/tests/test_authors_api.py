@@ -44,7 +44,7 @@ def test_create_author():
     new_author_response = apiInstance.post(
         "/authors",
         headers={"Content-Type": "application/json"},
-        json={"author": {"name": MY_NAME}, "books": request_books},
+        json={"name": MY_NAME},
     )
     assert new_author_response.status_code == 200
     new_author = new_author_response.json()
